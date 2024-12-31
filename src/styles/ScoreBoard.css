@@ -1,0 +1,6 @@
+.score-board{
+    display: flex;
+    flex-direction: column;
+}.score-board p{
+    text-align: right;
+}

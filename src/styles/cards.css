@@ -1,0 +1,30 @@
+.cards{
+    margin-top: 1rem;
+    display: flex;
+    padding: 1rem 10%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}.card{
+    height: 200px;
+    width: 200px;
+    border-radius: 1rem;
+    position: relative;
+}.card:hover{
+    border: 1px solid hsl(10, 76%, 59%);
+    transform: scale(1.05);
+    
+
+}.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}.card p{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,.3);
+}

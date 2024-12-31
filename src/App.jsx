@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { useState } from "react";
+import Cards from "./Components/Cards.jsx";
+import ScoreBoard from "./Components/ScoreBoard.jsx";
+import EndScreen from "./Components/EndScreen.jsx";
 function App() {
-  const [count, setCount] = useState(0)
+  const [highScore, setHighScore] = useState(0);
+  // const [images, setImages] = useState([
+  //   {
+  //     // clicked : bool, name:str, src:src[domainName]
+  //   },
+  // ]);
+  const [isEnded, setIsEnded] = useState(false)
+
+  
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+      <div className="info-cont">
+        <p className="description">
+          You Loose when you click on an image twice. Good Luck!
         </p>
+        <ScoreBoard highScore={highScore} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <Cards />
+      {/* <EndScreen />  */}
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
