@@ -1,10 +1,10 @@
 import '../styles/ScoreBoard.css' 
 
-export default function ScoreBoard({ highScore }) {
+export default function ScoreBoard({ score,highScore }) {
   return <>
     <div className="score-board">
-      <p>{`Current Score : 00`}</p>
-      <p>{`High Score : 00`}</p>
+      <p>{`Current Score : ${score}`}</p>
+      <p>{`High Score : ${highScore}`}</p>
     </div>
   </>
 }

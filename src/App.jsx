@@ -4,6 +4,8 @@ import ScoreBoard from "./Components/ScoreBoard.jsx";
 import EndScreen from "./Components/EndScreen.jsx";
 function App() {
   const [highScore, setHighScore] = useState(0);
+  const [score, setScore] = useState(0)
+
   // const [images, setImages] = useState([
   //   {
   //     // clicked : bool, name:str, src:src[domainName]
@@ -19,10 +21,10 @@ function App() {
         <p className="description">
           You Loose when you click on an image twice. Good Luck!
         </p>
-        <ScoreBoard highScore={highScore} />
+        <ScoreBoard score={score} highScore={highScore} />
       </div>
 
-      <Cards />
+      <Cards score={score} setScore={setScore} highScore={highScore} setHighScore={setHighScore}/>
       {/* <EndScreen />  */}
 
     </>
