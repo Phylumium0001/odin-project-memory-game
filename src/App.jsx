@@ -4,16 +4,9 @@ import ScoreBoard from "./Components/ScoreBoard.jsx";
 import EndScreen from "./Components/EndScreen.jsx";
 function App() {
   const [highScore, setHighScore] = useState(0);
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useState(0);
 
-  // const [images, setImages] = useState([
-  //   {
-  //     // clicked : bool, name:str, src:src[domainName]
-  //   },
-  // ]);
-  const [isEnded, setIsEnded] = useState(false)
-
-  
+  const [isEnded, setIsEnded] = useState(false);
 
   return (
     <>
@@ -24,9 +17,13 @@ function App() {
         <ScoreBoard score={score} highScore={highScore} />
       </div>
 
-      <Cards score={score} setScore={setScore} highScore={highScore} setHighScore={setHighScore}/>
+      <Cards
+        score={score}
+        setScore={setScore}
+        highScore={highScore}
+        setHighScore={setHighScore}
+      />
       {/* <EndScreen />  */}
-
     </>
   );
 }
